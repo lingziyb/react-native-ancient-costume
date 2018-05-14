@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-	Text, Image, View
+	Text, Image, View, StyleSheet
 } from 'react-native';
 
 class Greeting extends Component {
@@ -12,7 +12,7 @@ class Greeting extends Component {
 			this.setState( pre => {
 				return { showText: !pre.showText };
 			} )
-		}, 1000 )
+		}, 3000 );
 	}
 
 	render() {
@@ -26,10 +26,20 @@ class Greeting extends Component {
 export default class App extends Component {
 	render() {
 		return (
-			<View>
-				<Greeting text='lingli888'></Greeting>
-				<Greeting text='zhao'></Greeting>
+			<View style={{ flex: 1, flexDirection: 'row' }}>
+				<View style={{ width: 50, backgroundColor: 'red' }} text='red lingli888'></View>
+				<Greeting style={{ width: 50, backgroundColor: 'blue' }} text='blue zhao'></Greeting>
+				<Text style={{ width: 50, backgroundColor: 'green' }}>12356789</Text>
 			</View>
 		);
 	}
 }
+
+const styles = StyleSheet.create( {
+	red: {
+		color: 'red'
+	},
+	blue: {
+		color: 'blue'
+	}
+} );
