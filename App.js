@@ -1,45 +1,23 @@
 import React, { Component } from 'react';
 import {
-	Text, Image, View, StyleSheet
+	Text, Image, View, TextInput
 } from 'react-native';
 
-class Greeting extends Component {
+export default class App extends Component {
 	constructor( props ) {
 		super( props );
-		this.state = { showText: true };
-
-		setInterval( () => {
-			this.setState( pre => {
-				return { showText: !pre.showText };
-			} )
-		}, 3000 );
+		this.state = { text: '111 2222 333' };
 	}
 
 	render() {
-		let display = this.state.showText ? this.props.text : '';
 		return (
-			<Text>{display}999</Text>
-		);
-	}
-}
-
-export default class App extends Component {
-	render() {
-		return (
-			<View style={{ flex: 1, flexDirection: 'row' }}>
-				<View style={{ width: 50, backgroundColor: 'red' }} text='red lingli888'></View>
-				<Greeting style={{ width: 50, backgroundColor: 'blue' }} text='blue zhao'></Greeting>
-				<Text style={{ width: 50, backgroundColor: 'green' }}>12356789</Text>
+			<View>
+				<TextInput style={{ height: 40 }} placeholder="input your phone number..."/>
+				<Text style={{ padding: 10, backgroundColor: 'red' }}>
+					{this.state.text.split( ' ' ).map( ( word ) => word ).join( '' )}
+				</Text>
 			</View>
 		);
 	}
 }
 
-const styles = StyleSheet.create( {
-	red: {
-		color: 'red'
-	},
-	blue: {
-		color: 'blue'
-	}
-} );
