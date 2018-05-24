@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
 	Text, View, StyleSheet
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
 import HomePage from './js/pages/home';
 
