@@ -12,7 +12,7 @@ export default class HomePage extends Component {
 	}
 	render() {
 		return (
-			<Text>welcome to lingli home ~~1111</Text>
+			<Text>welcome to lingli home ~~111111</Text>
 		);
 	}
 }
