@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "testlingzi",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,9 @@
   "dependencies": {
     "react": "16.3.1",
     "react-native": "0.55.3",
-    "react-navigation": "^2.0.1"
+    "react-native-easy-toast": "^1.1.0",
+    "react-native-splash-screen": "^3.0.7",
+    "react-navigation": "^1.5.8"
   },
   "devDependencies": {
     "babel-jest": "23.0.0-alpha.0",
