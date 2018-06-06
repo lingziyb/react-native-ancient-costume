@@ -65,7 +65,7 @@ const Navigator = TabNavigator({
 }, {
 	tabBarPosition: 'bottom',
 	animationEnabled: false,
-	initialRouteName: 'Second'
+	initialRouteName: 'Third'
 });
 
 export default class App extends Component {

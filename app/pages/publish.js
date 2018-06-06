@@ -9,7 +9,9 @@ export default class PublishPage extends Component {
 	}
 
 	sendArticle = () => {
-		this.refs.toast.show('囍，发布成功 !', 3000);
+		this.refs.toast.show('囍，发布成功 !', 1000, () => {
+			this.props.navigation.navigate('Home');
+		});
 	}
 
 	static navigationOptions = ({navigation}) => {
@@ -40,9 +42,9 @@ export default class PublishPage extends Component {
 
 				<Toast ref="toast" style={{backgroundColor: '#9BCD9B'}}
 					   position='top'
-					   positionValue={200}
-					   fadeInDuration={200}
-					   fadeOutDuration={200}
+					   positionValue={50}
+					   fadeInDuration={10}
+					   fadeOutDuration={10}
 				/>
 			</View>
 		);
