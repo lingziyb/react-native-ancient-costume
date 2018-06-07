@@ -111,7 +111,7 @@ export default class HomePage extends Component {
 	render() {
 		return (
 			<View style={styles.home}>
-				<Text style={styles.title}>一朵花开，千叶红</Text>
+				<Text style={styles.title}>花开，古风</Text>
 				<FlatList data={this.state.list}
 						  renderItem={ ({item}) => <Block item={item} navigation={this.props.navigation}></Block> }/>
 
@@ -128,14 +128,14 @@ export default class HomePage extends Component {
 const styles = StyleSheet.create({
 	home: {
 		backgroundColor: '#ffffff',
-		paddingBottom: 60,
+		paddingBottom: 45,
 		paddingTop: 2
 	},
 	title: {
 		padding: 10,
 		fontSize: 20,
 		borderBottomWidth: 1,
-		borderColor: '#dddddd',
+		borderColor: '#D1EEEE',
 		borderStyle: 'dotted',
 	},
 });

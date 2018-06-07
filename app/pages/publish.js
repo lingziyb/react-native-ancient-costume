@@ -19,7 +19,7 @@ export default class PublishPage extends Component {
 		return {
 			title: '撰写文章',
 			headerRight: (
-				<Text onPress={params.rightOnPress} style={{fontSize: 16, padding: 10}}>发布</Text>
+				<Text onPress={params.rightOnPress} style={{fontSize: 16, padding: 10, color: '#00CDCD'}}>发布</Text>
 			)
 		};
 	}
@@ -32,7 +32,7 @@ export default class PublishPage extends Component {
 	render() {
 		return (
 			<View style={styles.publish}>
-				<TextInput style={styles.title} placeholder='请输入标题' underlineColorAndroid="#dddddd"
+				<TextInput style={styles.title} placeholder='请输入标题' underlineColorAndroid="#D1EEEE"
 						   selectionColor="#888888" placeholderTextColor="#888888"/>
 				<TextInput style={styles.content}
 						   placeholder='写文章...'
@@ -40,7 +40,7 @@ export default class PublishPage extends Component {
 						   underlineColorAndroid='transparent'
 						   selectionColor="#888888" placeholderTextColor="#888888"/>
 
-				<Toast ref="toast" style={{backgroundColor: '#9BCD9B'}}
+				<Toast ref="toast" style={{backgroundColor: '#00CDCD'}}
 					   position='top'
 					   positionValue={50}
 					   fadeInDuration={10}

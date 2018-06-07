@@ -26,9 +26,18 @@ export default class MinePage extends Component {
 						</View>
 					</View>
 					<View style={styles.list}>
-						<Text>我的发表</Text>
-						<Text>我的收藏</Text>
-						<Text>最近浏览</Text>
+						<View style={styles.row}>
+							<Text>我的发表</Text>
+							<Text> > </Text>
+						</View>
+						<View style={styles.row}>
+							<Text>我的收藏</Text>
+							<Text> > </Text>
+						</View>
+						<View style={styles.row}>
+							<Text>最近浏览</Text>
+							<Text> > </Text>
+						</View>
 					</View>
 				</View>
 			</View>
@@ -42,21 +51,23 @@ const styles = StyleSheet.create({
 	},
 	img: {
 		height: 200,
-		opacity: 0.2
+		opacity: 0.2,
 	},
 	info: {
-		marginTop: -80
+		marginTop: -90,
+		height: '100%'
 	},
 	user: {
 		paddingHorizontal: 25,
 		flexDirection: 'row',
+		paddingBottom: 10
 	},
 	head: {
 		height: 80,
 		width: 80,
 		borderRadius: 40,
-		borderWidth: 1,
-		borderColor: '#eeeeee'
+		borderColor: '#D1EEEE',
+		borderWidth: 1
 	},
 	userRight: {
 		marginLeft: 10,
@@ -72,7 +83,17 @@ const styles = StyleSheet.create({
 	},
 	list: {
 		borderTopWidth: 1,
-		borderColor: '#eeeeee'
+		borderColor: '#D1EEEE',
+		paddingHorizontal: 15,
+		paddingVertical: 10
 	},
+	row: {
+		height: 50,
+		borderBottomColor: '#D1EEEE',
+		borderBottomWidth: 1,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center'
+	}
 });
 

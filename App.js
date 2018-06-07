@@ -65,7 +65,21 @@ const Navigator = TabNavigator({
 }, {
 	tabBarPosition: 'bottom',
 	animationEnabled: false,
-	initialRouteName: 'Third'
+	initialRouteName: 'First',
+	tabBarOptions: {
+		activeBackgroundColor: 'white',
+		activeTintColor: '#ffffff',
+		inactiveTintColor: '#f4f4f4',
+		style: {
+			backgroundColor: '#00CDCD'
+		},
+		labelStyle: {
+			fontSize: 15
+		},
+		indicatorStyle: {
+			backgroundColor: '#7FFFD4',
+		}
+	}
 });
 
 export default class App extends Component {

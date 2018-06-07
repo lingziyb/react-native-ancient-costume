@@ -4,83 +4,61 @@ import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 export default class HomeDetailPage extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			data: [
+				'在辽阔的巴尔虎草原上他这样听风吹过：吹过牧场，吹过人心与湖泊',
+				'清楚地记得，我是从一本油印的歌谱集上抄了这两首歌。那时，父亲的林场来了位林业大学毕业的技术员（他后来做了我的姐夫），他在大学期间吹黑管。有次深夜，他用曲笛吹起了一首忧伤抒缓优美的曲子，以及另一首旋律稍快的曲子。旋律在深夜的场部上空回旋。第二天我问，昨晚曲笛吹的是什么曲子？《牧歌》与《嘎达梅林》，内蒙古草原上的两首民歌，他说。从那以后，我记住了这两首曲子《牧歌》、《嘎达梅林》。他工作分配到林场时带了很多曲谱，其中有一本油印曲谱。后来我翻到了这两首曲子，集子上印刷着蓝色的油印钢板手刻字体，字体上的油迹稍稍地洇开，一切使我新奇，我赶紧用软面抄把《嘎达梅林》与《牧歌》抄了下来。《牧歌》歌词很好记：',
+				'其中最喜欢用口琴吹奏的有两首：《嘎达梅林》、《牧歌》。前者是歌唱内蒙古草原英雄嘎达梅林，曲调高昂，明亮，略带忧伤，却阔大，充满着歌唱英雄的音乐元素。辽阔蒙古草原上嘎达梅林的英雄主义，就那样扎根在一个南方少年的心里。而后一首《牧歌》，则风格迥异，起句就拉得很开，悠扬，缓慢，辽阔。如此抒情，在那个年代我第一次听到并歌唱这样的歌曲。它一开始就让少年时代的我为之迷恋。',
+				'',
+				'',
+				'',
+				'',
+			]
+		}
 	}
 
 	render() {
 		return (
 			<View style={styles.articleDetail}>
 				<ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-					<Text style={styles.words}>
-						不懂拒绝，其实是得了一种叫“不好意思”的病。过度友善的人，不忍或害怕拒绝别人，他们总是怀抱善意，宁可牺牲自己的时间、精力，也不想让别人失望。然而，害怕拒绝，害怕让别人失望，也是一种自卑。
-
-						懂得拒绝，恰是最好的尊重 生活总有点欺软怕硬。一个完全不懂拒绝的人，也不可能赢得真正的尊重。
-
-						不懂拒绝的人，迟早要学会狠下心肠。
-					</Text>
+					{
+						this.state.data.map((el) => {
+							return (
+								<Text style={styles.words}>{el}</Text>
+							)
+						})
+					}
 					<Image style={styles.img}
-						   source={{uri: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1413087566,536381263&fm=27&gp=0.jpg'}}/>
-					<Text style={styles.words}> 1 不懂拒绝，是一种病
+						   source={{uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528267389572&di=5007211422f5eb30df64d55ecd4c8764&imgtype=0&src=http%3A%2F%2Fpic.qqtn.com%2Fup%2F2017-12%2F2017122811264883374.jpg'}}/>
+					<Text style={styles.words}>白云的下面是那洁白的羊群</Text>
 
-						很多人都喜欢《欢乐颂》里的关雎尔，因为她人长得甜美，心地也好。但她也常常为人诟病：正因为心地太好，她不懂得拒绝别人。
-
-						关雎尔很多时候加班加得晚，都是因为帮别人做事。终于有一次，同事又病了请她完成剩下的工作，最后也是她签名确认。
-
-						同事做的那一部分错漏百出，经理知道后却只骂了关雎尔。因为最后签名的是她，所有责任都要她来承担。而那个同事，出事之后一句话也没替她说，也没有一句安慰。
-
-						关雎尔的傻白甜行径，其实也是今天许多人的写照：
-
-						因为想塑造自己的良好形象，所以对朋友的请求来者不拒。终于，我们温暖了别人，却累死了自己。
-
-					</Text>
-					<Text style={styles.words}> 2 你有多重要？
-
-						“TA一定是走投无路了，才来找我……”、“要是我把TA拒绝了，我就是坏人……”这是我们在接受求助时的心理。
-
-						不懂拒绝的背后，是我们往往将自己放在太重要的位置。
-
-						斗米恩升米仇的故事，却告诉了我们一个无法违背的人性：
-
-						帮得了一次，就有第二次；帮得了第二次，就有后面无穷多次。而无休止帮助的剧情发展，往往是始于感恩，终于嫌隙。当哪一次帮不上忙，你就会变成罪人。
-
-					</Text>
+					<Text style={styles.words}>蓝蓝的天空上飘着那白云</Text>
 					<Image style={styles.img}
 						   source={{uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527869786081&di=9d4d404cf6082b08da2c1b5820f1ba4e&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fw11%2F75%2Fd%2F1.jpg'}}/>
-					<Text style={styles.words}> 3 你的位置，决定了你的作为
+					<Text style={styles.words}>羊群好像是斑斑的白银</Text>
+					<Text style={styles.words}>撒在草原上多么爱煞人</Text>
+					<Text style={styles.words}>
+						一遍又一遍，我望着远去的飞鸟
 
-						《蝙蝠侠大战超人：正义黎明》这部电影里面，从不拒绝救助任何人的超人，面临着一个巨大挑战：民众在恐慌，这么一个能力巨大的人，他为什么只是帮助人？未来会不会有一天，他用这种强大力量反过来杀人？
+						我折回的目光跌落在蓬勃的青草上
 
-						因此在法庭上，众人拷问的是超人的这个问题：你到底是谁？
+						洁白的羊群引走了牧羊人，草原剩下一片空旷
 
-						不懂拒绝别人的人，有意无意地其实是把自己当成了超人。而他们之所以不懂得拒绝，其实正是因为他们跟超人一样，根本没有弄清楚自己到底是谁。
+						一条漫长的道路饱浸春天的悲痛
 
-						关雎尔没有弄清楚自己的身份，她只是公司的其中一个职能，在一个讲究分工协作的五百强企业，她根本不可能完成所有职能的执行。所以她累死累活，最终只能得到跟超人同样的质问。
+						面对青草，我泪水滔滔
+
+						……
+
+						平静的天空下，太阳、月亮滚过草原
+
+						青草收回我，竖琴收回了它的歌手
 
 					</Text>
-					<Text style={styles.words}> 4 拒绝！时而温柔、时而狠狠地拒绝！
 
-						“有所为，有所不为”，是孔子的话。“有所不为”就是拒绝。什么样的人有所不为？君子。
-
-						君子就是一种身份地位。像君子一样，对于不同身份地位的人，就有他们该做和该拒绝做的事。
-
-						三毛说： “不要害怕拒绝他人，如果自己的理由出于正当。当一个人开口提出要求的时候，他的心里根本预备好了两种答案。所以，给他任何一个其中的答案，都是意料中的。”
-
-						因此，拒绝别人，一定要先给出一个正当理由。“我要下班”、“我不喜欢这样做”都是正当理由。哪怕单纯就是不想帮，“我不想”也是最好的理由。
-
-						如果不想伤害别人的面子，话就说得圆一点。
-
-						钱锺书去世后，早年就暗恋杨绛的费孝通又再上门，临走时，杨绛送他一句话：“楼梯不好走，你以后也不要‘知难而上’了。”
-
-						费孝通也是聪明人，以后也只能死了那条心。
-
-						拒绝，不是对来者的侮辱。相反，不浪费大家的时间，是对双方最大的尊重。
-
-						而每一次拒绝，你都是再一次回答了一个重要的问题，也促使对方思考这一个问题：
-
-						我到底是谁。
-					</Text>
 				</ScrollView>
 				<View style={styles.title}>
-					<Text style={styles.name} onPress={this._onPress.bind(this)}>小小的我</Text>
+					<Text style={styles.name} onPress={this._onPress.bind(this)}>骑着马穿越草原</Text>
 					<Text style={styles.author}>作者</Text>
 					<Text style={styles.authorName}>闫冰</Text>
 				</View>
@@ -99,12 +77,12 @@ const styles = StyleSheet.create({
 	articleDetail: {
 		flexDirection: 'row',
 		backgroundColor: '#ffffff',
-		paddingTop: 20
 	},
 	content: {
 		paddingLeft: 15,
 		paddingRight: 5,
-		paddingBottom: 20
+		paddingBottom: 20,
+		paddingTop: 10
 	},
 	img: {
 		height: 200,
@@ -118,11 +96,12 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		flexDirection: 'column',
-		alignItems: 'center'
+		alignItems: 'center',
+		paddingTop: 10
 	},
 	name: {
-		width: 45,
-		fontSize: 23,
+		width: 43,
+		fontSize: 22,
 		textAlign: 'center',
 		flexDirection: 'column',
 		color: '#444444'
