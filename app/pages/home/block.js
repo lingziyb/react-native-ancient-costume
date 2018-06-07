@@ -8,22 +8,27 @@ export default class Block extends Component {
 
 	render() {
 		return (
-			<TouchableHighlight onPress={this.enterDetail.bind(this)}>
+			<TouchableHighlight onPress={this.enterDetail.bind(this, this.props.item.url)}>
 				<View style={styles.item}>
 					<View style={styles.itemImgs}>
-						<Image style={styles.img} source={{uri: this.props.item.img}}/>
-						<Image style={styles.img} source={{uri: this.props.item.img1}}/>
-						<Image style={styles.img} source={{uri: this.props.item.img2}}/>
+						{
+							this.props.item.imgs.map((img, index) => {
+								if (index > 2) return;
+								return (
+									<Image key={index} source={{uri: img}} style={styles.img}/>
+								)
+							})
+						}
 					</View>
-					<Text style={styles.name}>{this.props.item.title}</Text>
-					<Text style={styles.text}>{this.props.item.info}</Text>
+					<Text style={styles.name} numberOfLines={2}>{this.props.item.title}</Text>
+					<Text style={styles.info} numberOfLines={2}>{this.props.item.info.replace(/\s/g, "") }</Text>
 				</View>
 			</TouchableHighlight>
 		)
 	}
 
-	enterDetail() {
-		this.props.navigation.navigate('HomeDetail');
+	enterDetail(url) {
+		this.props.navigation.navigate('HomeDetail', {url: url});
 	}
 }
 
@@ -50,7 +55,7 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		color: '#333333'
 	},
-	text: {
-		marginTop: 2
+	info: {
+		marginTop: 2,
 	}
 });
